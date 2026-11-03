@@ -3,4 +3,4 @@ layout: home
 title: 首页
 ---
 
-欢迎来到我的读书笔记。这里公开记录我读过的书、摘录和感想。
+Welcome to my research notes. This is a public record of the achievements made using AI
