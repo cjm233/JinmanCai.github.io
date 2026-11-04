@@ -8,6 +8,7 @@ show_excerpts: true
 
 # 新增：配置 Markdown 解析器和数学公式引擎（极其重要！）
 markdown: kramdown
+
 kramdown:
+  input: GFM
   math_engine: mathjax
-  syntax_highlighter: rouge
