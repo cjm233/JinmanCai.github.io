@@ -1,8 +1,8 @@
 ---
-title: "Small-$T^2$ QCD 中的重子算符、拓扑孤子与连续谱阈值：研究进展与证明边界"
+title: "Baryon Operators, Topological Solitons, and Continuum Thresholds in Small-T² QCD: Research Progress and Limits of the Proof"
 date: 2026-11-02
 permalink: /posts/2026/11/qcd-t2-baryon-threshold/
-excerpt: "从四维带重子磁通 QCD 的横向零模出发，研究最低维重子算符、非阿贝尔玻色化、中心扭曲以及重子谱密度的阈值行为，并区分已证明结果与开放问题。"
+excerpt: "Starting from transverse zero modes of four-dimensional QCD with baryon magnetic flux, we study lowest-dimension baryon operators, non-Abelian bosonization, center twists, and spectral thresholds, carefully distinguishing established results from open problems."
 tags:
   - QCD
   - compactification
@@ -11,61 +11,65 @@ tags:
   - sine-Gordon
   - spectral-density
 math: true
+use_math: true
+mathjax: true
 ---
 
-> **研究笔记（2026-11-03 修订）**  本文整理一个正在推进的解析研究计划，而不是宣称已经证明原始四维 QCD 的最低重子谱。文中用 **[文献]**、**[推导]**、**[条件]**、**[待证]** 标记不同证据层次。涉及算符的公式均采用本文的归一化、手征和背景规范约定。
 
-## 摘要
+> **Research note (revised November 4, 2026).** This article documents an ongoing analytical research program; it does not claim to have established the lowest baryon spectrum of the original four-dimensional QCD theory. We label the strength of each result as **[Literature]**, **[Derived]**, **[Conditional]**, or **[Open]**. Operator formulas follow the normalization, chirality, and background-gauge conventions specified here.
 
-考虑两个无质量 flavor 的 $SU(3)$ QCD，在
+## Abstract
+
+Consider $$SU(3)$$ QCD with two massless quark flavors on
 
 $$
 \mathbb R^{1,1}\times T^2,
 \qquad N_c=3,\quad N_f=2,\quad L\Lambda_{\rm QCD}\ll1
 $$
 
-上施加兼容的颜色 't Hooft flux 与重子数磁通。原有研究建立了从四维背景到二维 Dirac 零模以及 center-vortex 有效理论的联系。本文进一步整理以下研究：
+with compatible color 't Hooft flux and baryon-number magnetic flux. Earlier studies established the relation between the four-dimensional background, two-dimensional Dirac zero modes, and the center-vortex effective theory. Here we organize the following additional results:
 
-1. 将二维无导数的最低维 $B=1$ 算符完整分类为两类手征 doublet；
-2. 构造具有非零树级零模投影的四维 point-split 重子源，并厘清其局域导数展开；
-3. 将 $U(2)_1$ WZW 的领先阶局部作用量分解成 sine-Gordon singlet sector 与 $SU(2)_1$ flavor sector；
-4. 将 $B=1$ 与 $\eta'$ 的 $6\pi$ winding 对应，计算**标准中心扭曲模型**的最低 conformal weight；
-5. 在单 soliton form factor 非零、因子化且无危险缺陷相互作用的假设下，得到谱密度阈值指数 $\alpha=-1/2$；
-6. 讨论缺陷 RG、核心自由度的对称性允许反例，以及尚未完成的四维微观匹配。
+1. A complete classification of lowest-dimension, derivative-free $$B=1$$ operators in the two-dimensional zero-mode sector into two chiral doublets;
+2. The construction of a four-dimensional point-split baryon source with a nonzero tree-level zero-mode projection, including a careful treatment of its local derivative expansion;
+3. The separation of the leading local $$U(2)_1$$ WZW action into a sine-Gordon singlet sector and an $$SU(2)_1$$ flavor sector;
+4. The identification of $$B=1$$ with a $$6\pi$$ winding of $$\eta'$$ and the determination of the lowest conformal weight in the **standard center-twisted model**;
+5. The conditional derivation of the spectral-threshold exponent $$\alpha=-1/2$$, assuming a nonvanishing one-soliton form factor, factorization, and no dangerous defect interactions;
+6. An assessment of defect RG, symmetry-compatible counterexamples involving core degrees of freedom, and the outstanding four-dimensional microscopic matching problem.
 
-**中心结论（条件性）：**
+**Main result (conditional):**
 
 $$
 \boxed{\rho_B^{(1)}(s)\ \sim\ A_B\,
 \Theta(s-M_B^2)(s-M_B^2)^{-1/2}}
 $$
 
-是**最小因子化缺陷模型中的最低单 soliton 连续谱贡献**，尚不是完整四维 QCD 的无条件最低谱定理。
+This is the **leading one-soliton continuum contribution in the minimal factorized defect model**, not an unconditional theorem about the lowest spectrum of the complete four-dimensional QCD theory.
 
 ---
 
-## 目录
+## Contents
 
-1. [研究目标与逻辑链](#section-1)
-2. [四维磁通紧致化与二维零模](#section-2)
-3. [最低维二维重子算符的分类](#section-3)
-4. [四维重子源与 point-splitting 匹配](#section-4)
-5. [非阿贝尔玻色化及局部因子化](#section-5)
-6. [重子数拓扑荷与中心扭曲](#section-6)
-7. [单 soliton 阈值谱密度](#section-7)
-8. [RG 稳定性、唯一性与微观障碍](#section-8)
-9. [结果边界与下一步问题](#section-9)
-10. [附录 A：横向波函数及 Wronskian](#appendix-a)
-11. [附录 B：WZW 动能与三形式的分解](#appendix-b)
-12. [附录 C：经典 kink 及涨落谱](#appendix-c)
-13. [附录 D：中心扭曲有限体积谱](#appendix-d)
-14. [附录 E：谱密度的相空间推导](#appendix-e)
-15. [参考文献](#references)
+1. [Research objective and logical chain](#section-1)
+2. [Four-dimensional flux compactification and two-dimensional zero modes](#section-2)
+3. [Classification of the lowest-dimension two-dimensional baryon operators](#section-3)
+4. [Four-dimensional baryon sources and point-splitting matching](#section-4)
+5. [Non-Abelian bosonization and local factorization](#section-5)
+6. [Topological baryon charge and center twist](#section-6)
+7. [One-soliton threshold spectral density](#section-7)
+8. [RG stability, uniqueness, and microscopic obstructions](#section-8)
+9. [Scope of the results and next questions](#section-9)
+10. [Appendix A: Transverse wavefunctions and the Wronskian](#appendix-a)
+11. [Appendix B: Decomposition of the WZW kinetic term and three-form](#appendix-b)
+12. [Appendix C: Classical kink and fluctuation spectrum](#appendix-c)
+13. [Appendix D: Finite-volume spectrum of the center-twisted sector](#appendix-d)
+14. [Appendix E: Phase-space derivation of the spectral density](#appendix-e)
+15. [References](#references)
 
 <a id="section-1"></a>
-## 1. 研究目标与逻辑链
 
-我们尝试建立的逻辑链是
+## 1. Research Objective and Logical Chain
+
+The sequence of implications we aim to establish is
 
 $$
 \begin{gathered}
@@ -87,22 +91,23 @@ $$
 \end{gathered}
 $$
 
-**必须强调：** 从 $B=1$ 的全局约束到“无附加核心自由度的最小缺陷固定点”是目前最重要的**待证动力学箭头**。二维模型的自洽计算不能替代这个匹配。
+**Crucial caveat:** The passage from global constraints in the $$B=1$$ sector to the minimal defect fixed point **without additional core degrees of freedom** remains the most important **unproven dynamical step**. Internal consistency of the two-dimensional model cannot substitute for microscopic matching.
 
-记号约定：$L$ 表示横向 $T^2$ 尺度；$R$ 表示进一步有限化后纵向空间圆周的长度；$M_B$ 表示最低候选 soliton 的物理质量，不等同于经典小涨落质量。
+**Notation:** $$L$$ is the transverse $$T^2$$ size; $$R$$ is the circumference of the remaining spatial direction when it is compactified further; and $$M_B$$ is the physical mass of the lowest candidate soliton, which should not be confused with the classical small-fluctuation mass.
 
 <a id="section-2"></a>
-## 2. 四维磁通紧致化与二维零模 [文献]
 
-将四维坐标记为 $X=(x,y)$，其中 $x\in\mathbb R^{1,1}$，$y=(x_3,x_4)\in T^2$。在单位重子磁通背景中，
+## 2. Four-Dimensional Flux Compactification and Two-Dimensional Zero Modes [Literature]
+
+Write the four-dimensional coordinates as $$X=(x,y)$$, with $$x\in\mathbb R^{1,1}$$ and $$y=(x_3,x_4)\in T^2$$. In the background with one unit of baryon magnetic flux,
 
 $$
 \int_{T^2}F_B=2\pi.
 $$
 
-颜色 twist 与重子磁通结合，使夸克的横向 Dirac 算符具有一个规范允许的零模（每个 flavor 对应一个二维 Dirac 场），而非零横向激发的典型能标为 $O(1/L)$ [1,2]。
+The color twist and baryon flux together lead to an allowed zero mode of the transverse Dirac operator, yielding one two-dimensional Dirac field per flavor. Nonzero transverse excitations have a characteristic energy of $$O(1/L)$$ [1,2].
 
-四维夸克场可展开为
+The four-dimensional quark field admits an expansion
 
 $$
 \boxed{
@@ -112,13 +117,13 @@ q_f^{aA}(x,y)
 +q_{f,H}^{aA}(x,y).}
 $$
 
-这里 $a=1,2,3$ 是颜色指标，$A$ 是四维 Dirac 指标；$v^a(y)$ 是横向颜色波函数，$\xi_{R,L}$ 为固定的自旋嵌入，$\chi_{f,R/L}(x)$ 为**无独立颜色指标**的二维 Grassmann 场。适当归一化为
+Here $$a=1,2,3$$ is the color index and $$A$$ is a four-dimensional Dirac index. The transverse color wavefunction is $$v^a(y)$$, while $$\xi_{R,L}$$ are fixed spinor embeddings. The two-dimensional Grassmann fields $$\chi_{f,R/L}(x)$$ have **no independent color index**. A convenient normalization is
 
 $$
 \int_{T^2}d^2y\sum_{a=1}^3|v^a(y)|^2=1.
 $$
 
-因此，最低能量的 flavor 场空间是
+Consequently, the low-energy flavor spaces are
 
 $$
 U_R=\operatorname{span}\{\chi_{u,R},\chi_{d,R}\}
@@ -127,14 +132,15 @@ U_R=\operatorname{span}\{\chi_{u,R},\chi_{d,R}\}
 U_L\simeq\mathbf2_L.
 $$
 
-**结论：** 原始紧致化背景支持二维低能场的构造；但“非零 KK 模在真空背景中有隙”并不等于“相互作用重子核心不存在新低能态”。
+**Conclusion:** The compactified microscopic background supports the construction of two-dimensional low-energy fields. However, a gap for nonzero KK modes around the vacuum background does **not** establish the absence of additional low-energy states in the interacting baryon core.
 
 <a id="section-3"></a>
-## 3. 最低维二维重子算符的分类 [推导]
 
-### 3.1 由 Grassmann 反对易关系分类
+## 3. Classification of Lowest-Dimension Two-Dimensional Baryon Operators [Derived]
 
-研究不含导数、由三个二维零模费米场构成、经典维数 $\Delta_{\rm UV}=3/2$ 的 $B=1$ 算符。三个 Grassmann 生成元的反对称组合属于
+### 3.1 Classification from Grassmann Anticommutation
+
+Consider derivative-free $$B=1$$ operators composed of three two-dimensional zero-mode fermion fields, with classical dimension $$\Delta_{\rm UV}=3/2$$. Their antisymmetric Grassmann products belong to
 
 $$
 \Lambda^3(U_R\oplus U_L)
@@ -144,14 +150,14 @@ $$
 \oplus\Lambda^3U_L.
 $$
 
-因为 $\dim U_R=\dim U_L=2$，有
+Since $$\dim U_R=\dim U_L=2$$,
 
 $$
 \Lambda^3U_R=\Lambda^3U_L=0,
 \qquad \Lambda^2\mathbf2=\mathbf1.
 $$
 
-从而
+It follows that
 
 $$
 \boxed{
@@ -159,7 +165,7 @@ $$
 =(\mathbf1_R,\mathbf2_L)\oplus(\mathbf2_R,\mathbf1_L).}
 $$
 
-所以 $RRR$ 与 $LLL$ 组合消失，最低维算符仅有 $RRL$ 和 $LLR$ 两类。取 $\epsilon^{ud}=1$，定义
+The $$RRR$$ and $$LLL$$ combinations therefore vanish; only the $$RRL$$ and $$LLR$$ types survive at this dimension. With $$\epsilon^{ud}=1$$, define
 
 $$
 \boxed{
@@ -173,11 +179,11 @@ $$
 \end{aligned}}
 $$
 
-例如 $\mathcal B_R^u=:\!\chi_{u,R}\chi_{d,R}\chi_{u,L}\!:$。两类算符在对角 $SU(2)_V$ 下都是 $I=1/2$ doublet，不包含额外的 $I=3/2$ 分量。
+For example, $$\mathcal B_R^u=:\!\chi_{u,R}\chi_{d,R}\chi_{u,L}\!:$$ . Both types transform as $$I=1/2$$ doublets under the diagonal $$SU(2)_V$$ subgroup, with no additional $$I=3/2$$ component.
 
-### 3.2 Lorentz 标签与 flavor 表示不可混淆
+### 3.2 Lorentz Labels Versus Chiral Flavor Representations
 
-二维基本费米场的 Lorentz 权重取 $s(\chi_R)=+1/2$、$s(\chi_L)=-1/2$。于是
+Choose the two-dimensional Lorentz weights $$s(\chi_R)=+1/2$$ and $$s(\chi_L)=-1/2$$. Then
 
 $$
 \begin{aligned}
@@ -186,28 +192,29 @@ s(\mathcal B_L)&=-\frac12-\frac12+\frac12=-\frac12.
 \end{aligned}
 $$
 
-这解释了为什么复合算符的下标分别为 $R$ 与 $L$；另一方面，$SU(2)_R$ singlet 来自两只右手场的 flavor 反对称收缩，所以
+This explains the subscripts $$R$$ and $$L$$ on the composite operators. By contrast, antisymmetrically contracting the flavor indices of two right-handed fields produces an $$SU(2)_R$$ singlet, so
 
 $$
 \mathcal B_R\sim(\mathbf1_R,\mathbf2_L),\qquad
 \mathcal B_L\sim(\mathbf2_R,\mathbf1_L).
 $$
 
-**适用范围：** 这里证明的“恰有两类”只限于**二维、纯零模、无导数、最低经典维数**的算符空间，不能推广为“四维所有重子源只有两类”。
+**Scope:** The statement that there are exactly two types applies **only to derivative-free, lowest-classical-dimension operators built from the two-dimensional zero modes**. It must not be extended to claim that there are only two baryon interpolating operators in the full four-dimensional theory.
 
 <a id="section-4"></a>
-## 4. 四维重子源与 point-splitting 匹配 [推导]
 
-### 4.1 普通局域三夸克源的树级投影为何为零？
+## 4. Four-Dimensional Baryon Sources and Point-Splitting Matching [Derived]
 
-考虑一般的局域四维重子源（Dirac 张量省略）：
+### 4.1 Why Does the Tree-Level Projection of a Local Three-Quark Source Vanish?
+
+Consider a generic local four-dimensional baryon source, suppressing its Dirac tensor:
 
 $$
 \mathcal J_{\rm loc}(x,y)
 =\epsilon_{abc}\,q^a(x,y)q^b(x,y)q^c(x,y).
 $$
 
-所有夸克都取相同横向零模时，颜色系数为
+When all three quarks are projected onto the same transverse zero-mode wavefunction, the color factor is
 
 $$
 \boxed{
@@ -215,18 +222,18 @@ $$
 =\det[v(y),v(y),v(y)]=0.}
 $$
 
-所以**无横向导数的局域三夸克源**的树级纯零模投影为零；这不意味着它的全阶量子匹配系数为零，更不意味着二维 $\mathcal B_{R,L}$ 算符不存在。
+Thus, the tree-level projection of a **local three-quark source without transverse derivatives** onto three zero modes vanishes. This does not imply that its all-order quantum matching coefficient vanishes, nor that the two-dimensional $$\mathcal B_{R,L}$$ operators do not exist.
 
-### 4.2 带 Wilson line 的 point-split 源
+### 4.2 Wilson-Line-Dressed Point-Split Sources
 
-在横向 $T^2$ 取三个位置 $y_i$ 与公共基点 $y_0$，定义
+Choose three positions $$y_i$$ on the transverse $$T^2$$ and a common base point $$y_0$$. Define
 
 $$
 \widehat q_f(x;y_i,y_0)
 =W(y_0,y_i)q_f(x,y_i),
 $$
 
-其中 $W$ 为沿指定路径的背景及颜色平行输运。定义四维 Dirac 旋量值源
+Here $$W$$ parallel-transports color and background gauge indices along a specified path. The resulting four-dimensional Dirac-spinor-valued source is
 
 $$
 \boxed{
@@ -239,7 +246,7 @@ C_4\gamma_3\widehat q_g^b(x;y_2)\bigr]
 \end{aligned}}
 $$
 
-在颜色规范变换下它不变；作为总 $B=1$ 的算符，它在外加 $U(1)_B$ 背景变换下仍是带电、规范**协变**的源。将零模展开代入，得到
+It is invariant under color gauge transformations; as an operator carrying total $$B=1$$, it remains charged and **gauge-covariant**, rather than invariant, under external $$U(1)_B$$ background-gauge transformations. Inserting the zero-mode expansion gives
 
 $$
 \boxed{
@@ -249,7 +256,7 @@ P_0\mathcal J_{h,\rm ps}^{A}
 +\xi_L^A\mathcal B_L^h\bigr],}
 $$
 
-其中整体相位取决于 Dirac 基和路径约定，且
+The overall phase depends on the Dirac basis and the path conventions, and
 
 $$
 D_{\rm ps}
@@ -257,11 +264,11 @@ D_{\rm ps}
 \widehat v^a(y_1)\widehat v^b(y_2)\widehat v^c(y_3).
 $$
 
-因此，只要三个平行输运后的颜色向量线性独立，就有 $D_{\rm ps}\ne0$。这是**树级算符存在性匹配**，不是完整 $B=1$ 微观能谱匹配。
+Therefore, if the three parallel-transported color vectors are linearly independent, $$D_{\rm ps}\neq0$$. This establishes a **tree-level operator-overlap matching**, not a complete microscopic matching of the $$B=1$$ spectrum.
 
-### 4.3 重要修正：最早的 $O(\delta^2)$ 展开是错误的
+### 4.3 Important Correction: The Original $$O(\delta^2)$$ Expansion Was Wrong
 
-对于当前横向正手性零模，协变 Dirac 方程给出（在本文约定下）
+For the positive transverse-chirality zero mode, the covariant Dirac equation implies, in our conventions,
 
 $$
 (D_3-iD_4)v=0
@@ -269,14 +276,14 @@ $$
 D_4v=-iD_3v.
 $$
 
-因此
+Consequently,
 
 $$
 \boxed{
 \epsilon_{abc}v^a(D_3v)^b(D_4v)^c=0.}
 $$
 
-这排除了以前设想的二导数颜色系数。取局部全纯表示 $\mathbf u(z)$ 和相近的三个点 $z,z+\delta_2,z+\delta_3$，Taylor 展开得
+This rules out the previously proposed two-derivative color coefficient. Using the local holomorphic representation $$\mathbf u(z)$$ and three nearby points $$z,z+\delta_2,z+\delta_3$$, the Taylor expansion yields
 
 $$
 \boxed{
@@ -288,7 +295,7 @@ $$
 \end{aligned}}
 $$
 
-所以首个**可能非零**的局域项是 $O(\delta^3)$，对应三个横向导数。它的颜色系数可写作
+Thus, the first **potentially nonzero** local term is $$O(\delta^3)$$ and contains three transverse derivatives. Its color coefficient can be written as
 
 $$
 \boxed{
@@ -297,7 +304,7 @@ $$
 (D_3^2v)^a(D_3v)^bv^c.}
 $$
 
-例如，含三导数的局域四维源为
+An example of a local four-dimensional source with three transverse derivatives is
 
 $$
 \boxed{
@@ -307,35 +314,35 @@ $$
 q_h^{cA},}
 $$
 
-它的树级纯零模投影与 $\mathcal W_{210}(y)(\xi_R\mathcal B_R+\xi_L\mathcal B_L)$ 成正比。在所选背景下，$\mathcal W_{210}$ 不恒为零（数值检查见附录 A）。
+Its tree-level projection onto three zero modes is proportional to $$\mathcal W_{210}(y)(\xi_R\mathcal B_R+\xi_L\mathcal B_L)$$. In the chosen background, $$\mathcal W_{210}$$ is not identically zero (see the numerical check in Appendix A).
 
-**注意：** 有限分离的 point-split 源与无导数的局域 Ioffe current 是不同的算符；前者非零不证明后者具有非零树级零模重叠。
+**Note:** A point-split source at finite separation and a derivative-free local Ioffe current are different operators. Nonvanishing overlap of the former does not imply nonvanishing tree-level zero-mode overlap of the latter.
 
 <a id="section-5"></a>
-## 5. 非阿贝尔玻色化及局部因子化 [文献 + 推导]
 
-### 5.1 从两个二维 Dirac 场到 $U(2)_1$ WZW
+## 5. Non-Abelian Bosonization and Local Factorization [Literature + Derived]
 
-在无质量、领先阶二维零模理论中，两个 Dirac flavor 可以非阿贝尔玻色化成 level-1 的 $U(2)$ Wess–Zumino–Witten 理论。定义
+### 5.1 From Two Two-Dimensional Dirac Fields to the $$U(2)_1$$ WZW Model
+
+In the massless leading-order two-dimensional zero-mode theory, two Dirac flavors can be non-Abelian-bosonized into the level-one $$U(2)$$ Wess–Zumino–Witten theory. Define
 
 $$
 \boxed{U=e^{i\eta'/2}g,\qquad g\in SU(2),\qquad
 \det U=e^{i\eta'}.}
 $$
 
-$\eta'$ 为 singlet 场，$g$ 在 $SU(2)_L\times SU(2)_R$ 下按 $g\mapsto LgR^\dagger$ 变换。
+The field $$\eta'$$ is a flavor singlet, whereas $$g$$ transforms as $$g\mapsto LgR^\dagger$$ under $$SU(2)_L\times SU(2)_R$$.
 
-### 5.2 动能项分解
+### 5.2 Decomposition of the Kinetic Term
 
-由
+Using
 
 $$
 \partial_\mu U=e^{i\eta'/2}
 \left[\frac{i}{2}(\partial_\mu\eta')g+\partial_\mu g\right],
 $$
 
-以及 $\operatorname{tr}(g^\dagger\partial_\mu g)
-=\partial_\mu\ln\det g=0$，得到
+together with $$\operatorname{tr}(g^\dagger\partial_\mu g)=\partial_\mu\ln\det g=0$$, we obtain
 
 $$
 \boxed{
@@ -344,25 +351,25 @@ $$
 +\operatorname{tr}(\partial_\mu g^\dagger\partial_\mu g).}
 $$
 
-在 $1/(8\pi)$ 的 WZW 动能归一化下，singlet 动能因此是 $(\partial\eta')^2/(16\pi)$。
+With the WZW kinetic normalization $$1/(8\pi)$$, the resulting singlet kinetic term is $$(\partial\eta')^2/(16\pi)$$.
 
-### 5.3 WZW 三形式与 center-vortex 势
+### 5.3 The WZW Three-Form and the Center-Vortex Potential
 
-记 $A=g^{-1}dg$。因为
+Write $$A=g^{-1}dg$$. Since
 
 $$
 U^{-1}dU=\frac i2d\eta'\,\mathbf1+A,
 \qquad \operatorname{tr}(A\wedge A)=0,
 $$
 
-所以局部三形式满足
+the local three-form satisfies
 
 $$
 \operatorname{tr}(U^{-1}dU)^3
 =\operatorname{tr}(g^{-1}dg)^3.
 $$
 
-而 center-vortex 势取决于扩展意义下的 $(\det U)^{\pm1/3}$，因而只依赖 $\eta'$。在无质量条件下，领先阶局部作用量得到
+The center-vortex potential depends on $$(\det U)^{\pm1/3}$$ with the appropriate extended-phase definition and therefore only on $$\eta'$$. For massless quarks, the leading-order local action becomes
 
 $$
 \boxed{
@@ -376,31 +383,32 @@ S_{\rm SG}[\eta']
 \end{aligned}}
 $$
 
-以上局部作用量来源于 [2] 的非阿贝尔玻色化和 vortex 变形。**局部相加并不自动意味着物理 Hilbert space 是全局直积**；下面的 $\mathbb Z_3$ gluing 必须另行处理。
+This local action follows from the non-Abelian bosonization and vortex-induced deformation in [2]. **An additive local action does not imply that the physical Hilbert space is a global tensor product**; the $$\mathbb Z_3$$ gluing discussed below must be implemented separately.
 
-### 5.4 两个 sector 的红外行为
+### 5.4 Infrared Behavior of the Two Sectors
 
-规范归一化 $\phi=\eta'/\sqrt{8\pi}$ 给出 sine-Gordon 耦合 $\beta_{\rm SG}=\sqrt{8\pi}/3$。cosine 的 Gaussian 维数为
+The canonically normalized field $$\phi=\eta'/\sqrt{8\pi}$$ gives the sine-Gordon coupling $$\beta_{\rm SG}=\sqrt{8\pi}/3$$. The Gaussian scaling dimension of the cosine is
 
 $$
 \boxed{\Delta_{\rm vortex}
 =\frac{\beta_{\rm SG}^2}{4\pi}=\frac29<2.}
 $$
 
-因此 vortex 形变相关，使 singlet sector 获得质量尺度；保持完整手征对称性时，$SU(2)_1$ flavor sector 在领先阶仍是无质量 CFT。**量子修正和特定重子缺陷对该陈述的影响需要另行分析**。
+The vortex deformation is therefore relevant and generates a mass scale in the singlet sector; with the full chiral symmetry preserved, the $$SU(2)_1$$ flavor sector remains a massless CFT at leading order. **Quantum corrections and the effects of a particular baryon defect require separate analysis.**
 
 <a id="section-6"></a>
-## 6. 重子数拓扑荷与中心扭曲 [文献 + 条件]
 
-### 6.1 $B=1$ 对应 $\eta'$ 的 $6\pi$ winding
+## 6. Topological Baryon Charge and Center Twist [Literature + Conditional]
 
-残余 $\mathbb Z_3$ 规范结构使 singlet 相位具有扩展周期
+### 6.1 $$B=1$$ Corresponds to a $$6\pi$$ Winding of $$\eta'$$
+
+The residual $$\mathbb Z_3$$ gauge structure extends the period of the singlet phase:
 
 $$
 \eta'\sim\eta'+6\pi.
 $$
 
-采用 [2] 所对应的重子流规范化，
+With the baryon-current normalization corresponding to [2],
 
 $$
 \boxed{j_B^\mu
@@ -408,42 +416,42 @@ $$
 \qquad B=\frac{\Delta\eta'}{6\pi}.}
 $$
 
-因此 $B=1$ 的候选 kink 满足 $\Delta\eta'=6\pi$。
+A candidate $$B=1$$ kink thus has $$\Delta\eta'=6\pi$$.
 
-### 6.2 全局识别与最小中心扭曲候选
+### 6.2 Global Identification and the Minimal Center-Twist Candidate
 
-对于 $N_c=3,N_f=2$，场空间的覆盖描述包含
+For $$N_c=3,N_f=2$$, the covering-space description of the field space includes
 
 $$
 \boxed{(\eta',g)\sim(\eta'+6\pi,-g).}
 $$
 
-因为 $e^{i(\eta'+6\pi)/2}(-g)=e^{i\eta'/2}g$，该 gluing 与 $U=e^{i\eta'/2}g$ 相容。沿 $B=1$ winding，最自然的 flavor 候选是 $g\mapsto-g$ 的中心扭曲。
+Since $$e^{i(\eta'+6\pi)/2}(-g)=e^{i\eta'/2}g$$, this gluing is compatible with $$U=e^{i\eta'/2}g$$. Along a unit-$$B$$ winding, the most natural flavor candidate is the center twist $$g\mapsto-g$$.
 
-但**全局 gluing 只约束允许的拓扑结构，不直接证明微观 soliton 的唯一缺陷动力学**。
+However, **global gluing restricts the allowed topological structure; it does not prove the uniqueness of the microscopic soliton defect dynamics**.
 
-### 6.3 $SU(2)_1$ 扭曲配分函数
+### 6.3 The $$SU(2)_1$$ Twisted Partition Function
 
-$SU(2)_1$ 只有 $j=0,\frac12$ 两个可积表示，对应
+The $$SU(2)_1$$ theory has just two integrable representations, $$j=0,\frac12$$, with
 
 $$
 h_0=0,\qquad h_{1/2}=\frac14,\qquad c=1.
 $$
 
-中心插入后的配分函数为
+The partition function with an insertion of the center element is
 
 $$
 Z_{\rm ins}=|\chi_0|^2-|\chi_{1/2}|^2.
 $$
 
-利用 modular $S$ 矩阵
+Using the modular $$S$$ matrix
 
 $$
 S=\frac1{\sqrt2}
 \begin{pmatrix}1&1\\1&-1\end{pmatrix}
 $$
 
-可得到**标准中心扭曲模型**的空间扭曲配分函数
+one obtains the spatially twisted partition function of the **standard center-twisted model**:
 
 $$
 \boxed{Z_{\rm tw}
@@ -451,22 +459,23 @@ $$
 +\chi_{1/2}\bar\chi_0.}
 $$
 
-因此最低态具有
+The lowest states therefore have
 
 $$
 \boxed{(h,\bar h)
-=(0,\tfrac14)\ \text{或}\ (\tfrac14,0),
+=(0,\tfrac14)\ \text{or}\ (\tfrac14,0),
 \qquad \Delta_{\min}=\tfrac14.}
 $$
 
-两个通道分别是 flavor doublet，合计最低层四个分量。**此结论是固定扭曲 CFT 的表示论结果，而不是原始四维 QCD 的独立最低谱测量。**
+The two channels are flavor doublets, giving four components in total at the lowest level. **This is a representation-theoretic result within the specified twisted CFT, not an independent measurement of the lowest four-dimensional QCD spectrum.**
 
 <a id="section-7"></a>
-## 7. 单 soliton 阈值谱密度 [模型内推导]
 
-### 7.1 重子算符的 singlet–flavor 分解
+## 7. One-Soliton Threshold Spectral Density [Derived Within the Model]
 
-在最小因子化描述中，最低二维重子算符可表示为
+### 7.1 Singlet–Flavor Factorization of the Baryon Operator
+
+In the minimal factorized description, the lowest-dimension two-dimensional baryon operators can be expressed as
 
 $$
 \boxed{
@@ -475,18 +484,18 @@ $$
 \mathcal B_L\sim\mathcal N_L\mathcal V_{B,L}\Phi_{1/2,R}.}
 $$
 
-$\mathcal V_B$ 创造单位重子数的 singlet soliton，$\Phi$ 是手征 flavor primary，其非零权重为 $h=1/4$。此处的乘积分解必须在允许的全局拓扑扇区中理解。
+The operator $$\mathcal V_B$$ creates the singlet soliton with one unit of baryon number, whereas $$\Phi$$ is a chiral flavor primary with nonzero conformal weight $$h=1/4$$. This product must be interpreted in an allowed global topological sector.
 
-### 7.2 软 flavor 谱与阈值指数
+### 7.2 Soft Flavor Spectrum and Threshold Exponent
 
-手征 CFT 的两点函数满足
+The two-point function of a chiral CFT primary satisfies
 
 $$
 \langle\Phi_h(z)\Phi_h^\dagger(0)\rangle
 =\frac{C_f}{z^{2h}}.
 $$
 
-使用 Laplace 表示
+Using the Laplace representation
 
 $$
 \boxed{
@@ -496,7 +505,7 @@ $$
 \varepsilon^{2h-1}e^{-\varepsilon z},}
 $$
 
-可读出无质量 flavor 的软能量权重 $\propto\varepsilon^{2h-1}$。在一个有质量 soliton 质量为 $M_B$、其最低 form factor 光滑且非零的假设下，阈值附近 $s-M_B^2\propto\varepsilon$。于是对于**已提取轻锥运动学因子的标量谱密度**，
+we read off a soft-energy weight $$\propto\varepsilon^{2h-1}$$ for the massless flavor excitations. Assuming a massive soliton of mass $$M_B$$ with a smooth, nonvanishing lowest form factor, one has $$s-M_B^2\propto\varepsilon$$ near threshold. Thus, for the **scalar spectral density after factoring out the light-cone kinematic prefactors**:
 
 $$
 \boxed{
@@ -505,66 +514,67 @@ $$
 (s-M_B^2)^{2h-1}.}
 $$
 
-代入 $h=1/4$：
+Substituting $$h=1/4$$ gives
 
 $$
 \boxed{\alpha=2h-1=-\frac12.}
 $$
 
-更完整的相空间 Jacobian 与 form-factor 因子见附录 E。这个指数计算**没有**证明最低物理态必然就是所选单 soliton 通道，也没有排除新的缺陷散射相移。
+A more detailed phase-space Jacobian and the form-factor factors are given in Appendix E. This exponent calculation **does not** establish that the chosen one-soliton channel is the lowest physical state, nor does it exclude additional defect scattering phase shifts.
 
-### 7.3 Euclidean 长距离检验
+### 7.3 Long-Distance Euclidean Check
 
-有质量单粒子传播因子在 $x=0$、$M_B\tau\gg1$ 时近似为 $e^{-M_B\tau}/\sqrt\tau$；乘上 $SU(2)_1$ flavor 因子 $\tau^{-1/2}$，得到
+For $$x=0$$ and $$M_B\tau\gg1$$, the propagation factor of a massive particle behaves as $$e^{-M_B\tau}/\sqrt\tau$$. Multiplying by the $$SU(2)_1$$ flavor factor $$\tau^{-1/2}$$ yields
 
 $$
 \boxed{G_B^{(1)}(\tau,0)
 \sim A_G\frac{e^{-M_B\tau}}{\tau}.}
 $$
 
-左右候选算符属于不同的 $SU(2)_L\times SU(2)_R$ 表示。如果无质量理论的完整手征对称性未破缺，则利用 $SU(2)_L$ 中心变换，
+The left- and right-handed candidate operators transform in different $$SU(2)_L\times SU(2)_R$$ representations. If the full chiral symmetry of the massless theory is unbroken, an $$SU(2)_L$$ center transformation implies
 
 $$
 \boxed{
 G_{RL}=\langle\mathcal B_R\mathcal B_L^\dagger\rangle
 =0
-\quad\text{（精确手征对称性下）}.}
+\quad\text{(with exact chiral symmetry)}.}
 $$
 
-宇称对称且归一化一致时，两条对角单 soliton 谱具有相同的阈值形式。
+When parity is unbroken and the normalizations are chosen consistently, the two diagonal one-soliton spectral densities have the same threshold form.
 
 <a id="section-8"></a>
-## 8. RG 稳定性、唯一性与微观障碍
 
-### 8.1 Bulk RG 与 defect RG 必须分开
+## 8. RG Stability, Uniqueness, and Microscopic Obstructions
 
-对二维 bulk 扰动，线性 RG 本征值为 $2-\Delta$；对一维缺陷世界线上的扰动，则为
+### 8.1 Bulk and Defect RG Must Be Distinguished
+
+The linear RG eigenvalue of a two-dimensional bulk perturbation is $$2-\Delta$$, while that of a perturbation localized on a one-dimensional defect worldline is
 
 $$
 \boxed{\frac{d\widehat\lambda}{d\ell}
 =(1-\Delta_{\rm def})\widehat\lambda+\cdots.}
 $$
 
-在无质量、完整 $SU(2)_L\times SU(2)_R$ 对称下，$\operatorname{tr}g$ 不允许，$J_L^aJ_R^a$ 也不在完整手征群下不变。保持完整手征对称性的普通 flavor 标量修正，如 $T_f\bar T_f$，在固定点附近为无关算符。
+With massless quarks and exact $$SU(2)_L\times SU(2)_R$$ symmetry, $$\operatorname{tr}g$$ is forbidden, and $$J_L^aJ_R^a$$ is not invariant under the full chiral group. Conventional chirally invariant flavor scalar corrections, such as $$T_f\bar T_f$$, are irrelevant near the fixed point.
 
-对于**没有附加量子核心的标准可逆中心线**，线上的应力张量耦合
+On the **standard invertible center line with no additional quantum core**, an allowed stress-tensor coupling takes the form
 
 $$
 \delta S_T=\lambda_T\int d\tau\,T_f(\tau,X)
 $$
 
-具有 $\Delta_T=2$，因此
+This operator has $$\Delta_T=2$$ and therefore
 
 $$
 \boxed{\frac{d\widehat\lambda_T}{d\ell}
 =-\widehat\lambda_T+\cdots.}
 $$
 
-这支持**特定最小缺陷固定点的局部稳定性**，但并非所有微观缺陷算符的完整分类。
+This supports the **local stability of the specified minimal defect fixed point**, but it is not a complete classification of every microscopic defect operator.
 
-### 8.2 受控的示例性 bulk-to-defect 匹配
+### 8.2 An Illustrative Controlled Bulk-to-Defect Matching
 
-若高能模诱导
+Suppose integrating out high-energy modes induces
 
 $$
 \delta S_{\rm mix}
@@ -573,7 +583,7 @@ $$
 \qquad \Lambda_\perp\sim1/L,
 $$
 
-将经典 kink $\eta'_K$ 代入，并假设 flavor 场在核心尺度上变化缓慢，则
+Substituting the classical kink $$\eta'_K$$ and assuming the flavor fields vary slowly over the core scale gives
 
 $$
 \int dx\,(\partial_x\eta'_K)^2=72m
@@ -581,11 +591,11 @@ $$
 \lambda_T\simeq\frac{72c_Tm}{\Lambda_\perp^2}.
 $$
 
-故 $m\ll\Lambda_\perp$ 时，无量纲 $m\lambda_T\sim c_T(m/\Lambda_\perp)^2$ 受抑制。**这里的 $c_T$ 只是示意性 Wilson coefficient，尚未从完整四维 QCD 的圈图求出。**
+Hence, for $$m\ll\Lambda_\perp$$, the dimensionless coupling $$m\lambda_T\sim c_T(m/\Lambda_\perp)^2$$ is suppressed. **Here $$c_T$$ is only an illustrative Wilson coefficient; it has not been computed from loop diagrams in the full four-dimensional QCD theory.**
 
-### 8.3 精确 flavor 中心选择定则
+### 8.3 Exact Flavor-Center Selection Rule
 
-对角 $SU(2)_V$ 的中心作用为 $q\mapsto-q$。对于含有 $n_q$ 个夸克与 $n_{\bar q}$ 个反夸克的颜色 singlet，
+The center of the diagonal $$SU(2)_V$$ acts as $$q\mapsto-q$$. For a color singlet containing $$n_q$$ quarks and $$n_{\bar q}$$ antiquarks,
 
 $$
 (-1)^{n_q+n_{\bar q}}
@@ -593,78 +603,80 @@ $$
 =(-1)^{3B}=(-1)^B.
 $$
 
-自旋 $I$ 表示中的中心相位为 $(-1)^{2I}$，故
+The center acts on an isospin-$$I$$ representation with the phase $$(-1)^{2I}$$. Consequently,
 
 $$
 \boxed{(-1)^{2I}=(-1)^B.}
 $$
 
-于是 $B=1$ 的通常物理强子态必须具有半整数 isospin。这是一条微观对称性选择定则；但它不能唯一确定最低核心动力学。
+Ordinary physical $$B=1$$ hadron states must therefore carry half-integer isospin. This is a microscopic symmetry selection rule, but it does not uniquely determine the lowest core dynamics.
 
-### 8.4 “最低缺陷唯一”可以证明到哪一步？
+### 8.4 How Far Can One Prove Uniqueness of the Lowest Defect?
 
-**模型内已证明：** 固定标准 $SU(2)_1$ 中心扭曲 Hilbert space 后，每个最低手征 doublet 只出现一次，其最低权重为 $1/4$。
+**Proven within the model:** Once the standard $$SU(2)_1$$ center-twisted Hilbert space is specified, each lowest chiral doublet occurs with multiplicity one and has lowest weight $$1/4$$.
 
-**微观唯一性未证明：** 对称性允许在最小扭曲缺陷之外增加不改变中心选择定则的中性量子力学核心，例如整数 flavor 表示
+**Microscopic uniqueness remains unproven:** Symmetry permits additional neutral quantum-mechanical core degrees of freedom, in integer-spin flavor representations that do not change the center selection rule, such as
 
 $$
 \mathcal H_{\rm core}=(\mathbf3_L,\mathbf3_R).
 $$
 
-取其为额外简并核心，模型可含
+If this is an additional degenerate core, the effective model may contain
 
 $$
 S_{\rm int}=g_K\int d\tau\,
 \bigl(S_L^aJ_L^a+S_R^aJ_R^a\bigr).
 $$
 
-该耦合在静态缺陷上树级边缘，可能产生新的缺陷 RG 流。这个构造只是**与所检查对称性相容的有效理论反例**，并不是已经在四维 QCD 中发现了此核心束缚态。即使有解耦核心，也未必改变 $-1/2$ 指数；它首先说明仅靠现有对称性不能唯一确定完整缺陷 Hilbert space。
+This interaction is marginal at tree level on a static defect and may generate a new defect RG flow. The construction is **an effective-theory counterexample consistent with the symmetries examined**, not an identified bound state of the four-dimensional QCD theory. Even a decoupled core need not change the exponent $$-1/2$$; the main lesson is that the currently known symmetries alone do not determine the full defect Hilbert space uniquely.
 
-### 8.5 不能省略的四维微观匹配
+### 8.5 The Indispensable Four-Dimensional Microscopic Matching
 
-要将候选指数提升为原始 QCD 最低重子谱的无条件预测，还需回答：
+To promote the candidate exponent to an unconditional prediction for the lowest baryon spectrum of the microscopic QCD theory, one must answer:
 
-- 是否存在比候选 soliton 更低的 $B=1$ 态或更低的连续谱阈值？
-- 是否存在额外无隙或近零能核心自由度？
-- 真实的移动 soliton–flavor 散射相移是否改变端点标度？
-- 四维重子源的**完整量子** form factor 对目标最低通道是否非零？
-- 微观缺陷耦合是否流向上述最小固定点？
+- Are there $$B=1$$ states or continuum thresholds below the candidate soliton channel?
+- Are there additional gapless or nearly zero-energy core degrees of freedom?
+- Do scattering phase shifts between the real moving soliton and flavor excitations modify the endpoint scaling?
+- Is the **full quantum** form factor of the four-dimensional baryon source nonzero in the proposed lowest channel?
+- Do the microscopic defect couplings flow into the minimal fixed point described above?
 
-这些信息不能由普通真空 EFT 的局部因子化、中心扭曲配分函数或纯 SG kink 的经典涨落谱单独确定。格点可作为检验方法，但并非逻辑上唯一的途径；仍需新的非微扰或受控匹配计算。
+These questions cannot be answered from local factorization of the vacuum EFT, the center-twisted partition function, or the classical fluctuation spectrum of the pure SG kink alone. Lattice calculations can test the predictions but are not logically the only route; new nonperturbative input or controlled microscopic matching is still needed.
 
 <a id="section-9"></a>
-## 9. 结果边界与下一步问题
 
-| 研究问题 | 目前结论 | 证据层级 |
+## 9. Scope of the Results and Next Questions
+
+| Research question | Present conclusion | Evidence level |
 |---|---|---|
-| 带磁通 small-$T^2$ 的二维轻自由度 | 每 flavor 一个二维 Dirac 零模 | [文献] |
-| 无导数三零模 $B=1$ 算符分类 | $RRL$ 与 $LLR$ 两类 doublet | [推导] |
-| 四维 point-split 重子源 | 可构造非零树级零模投影 | [推导] |
-| 局域低能作用量 | 领先阶 $SG\,+\,SU(2)_1$ | [文献 + 推导] |
-| 重子拓扑荷 | $B=\Delta\eta'/(6\pi)$ | [文献] |
-| 标准中心扭曲最低权重 | $(0,1/4)$ 或 $(1/4,0)$ | [推导] |
-| 最小模型单 soliton 阈值 | $\rho^{(1)}\sim(s-M_B^2)^{-1/2}$ | [条件] |
-| 最小缺陷的应力张量扰动 | 红外无关 | [推导：限定算符空间] |
-| 微观最低缺陷唯一性 | 尚不能由已知对称性推出 | [待证] |
-| 微观核心谱、散射相移与 RG 初值 | 未完成匹配 | [待证] |
+| Two-dimensional light fields in flux-compactified small-$$T^2$$ QCD | One two-dimensional Dirac zero mode per flavor | [Literature] |
+| Derivative-free, three-zero-mode $$B=1$$ operators | Two doublet types, $$RRL$$ and $$LLR$$ | [Derived] |
+| Four-dimensional point-split baryon source | A nonzero tree-level zero-mode projection can be constructed | [Derived] |
+| Local low-energy action | Leading-order $$SG\,+\,SU(2)_1$$ | [Literature + Derived] |
+| Topological baryon charge | $$B=\Delta\eta'/(6\pi)$$ | [Literature] |
+| Lowest weight in the standard center-twisted sector | $$(0,1/4)$$ or $$(1/4,0)$$ | [Derived] |
+| One-soliton threshold in the minimal model | $$\rho^{(1)}\sim(s-M_B^2)^{-1/2}$$ | [Conditional] |
+| Stress-tensor perturbation of the minimal defect | Infrared irrelevant | [Derived: restricted operator space] |
+| Microscopic uniqueness of the lowest defect | Not implied by the currently known symmetries | [Open] |
+| Microscopic core spectrum, scattering phase shifts, and RG initial conditions | Matching not completed | [Open] |
 
-**目前最精确的研究陈述：**
+**Most precise statement of the research at present:**
 
-> 从带 baryon-'t Hooft flux 的 small-$T^2$ QCD 出发，可以得到具有明确微观零模来源的二维重子候选算符，并构造其非零树级四维源投影。在领先阶 $SG\times SU(2)_1$ 描述中，标准中心扭曲的最低 flavor 权重为 $1/4$；若真实 $B=1$ 红外缺陷由这一最小通道支配，且不存在改变阈值的核心散射及更低态，则单 soliton 的谱密度指数为 $-1/2$。微观缺陷固定点及完整最低谱尚未独立证明。
+> Starting from small-$$T^2$$ QCD with baryon-'t Hooft flux, one can construct candidate two-dimensional baryon operators with a definite microscopic zero-mode origin and exhibit four-dimensional sources whose tree-level projections onto them are nonzero. Within the leading $$SG\times SU(2)_1$$ description, the lowest flavor weight of the standard center-twisted sector is $$1/4$$. If the physical infrared $$B=1$$ defect is governed by this minimal channel, with no lower-lying states or additional core scattering that modifies the threshold, the one-soliton spectral density has exponent $$-1/2$$. Neither the microscopic defect fixed point nor the full lowest spectrum has yet been independently established.
 
 ---
 
 <a id="appendix-a"></a>
-## 附录 A：横向零模的显式波函数与非零 Wronskian
 
-在 [1] 所采用的局部规范下，令
+## Appendix A: Explicit Transverse Zero-Mode Wavefunctions and a Nonzero Wronskian
+
+In the local gauge used in [1], define
 
 $$
 X=\frac{x_3}{L},\quad Y=\frac{x_4}{L},\quad
 z=X-iY,
 $$
 
-可选取规范约定一致的零模形式
+A zero-mode solution compatible with the chosen gauge convention is
 
 $$
 \boxed{v^a(y)=\mathcal N_\perp e^{-\pi X^2/3}u_a(z),\qquad
@@ -673,25 +685,25 @@ u_a(z)=\sum_{n\in\mathbb Z}
 +2\pi\left(n+\frac{a-1}{3}\right)z\right].}
 $$
 
-相应的背景 twisted boundary conditions 由 clock/shift 矩阵实现；这些 $u_a$ 是局部截面的分量，不能作为全环面的普通周期标量来处理。
+The corresponding twisted boundary conditions are implemented by clock and shift matrices. The components $$u_a$$ are local sections, not ordinary globally periodic scalar functions on the torus.
 
-将三个横向分离点对应的全纯颜色向量构成 determinant，可以直接验证
+A determinant formed from the holomorphic color vectors evaluated at three transversely separated points can be checked directly:
 
 $$
 \det[\mathbf u(0),\mathbf u(1/3),\mathbf u(2/3)]
 \simeq 0.12553202345\ne0,
 $$
 
-以及
+and
 
 $$
 \det[\mathbf u(0),\mathbf u'(0),\mathbf u''(0)]
 \simeq2.42169200583\ne0.
 $$
 
-这些值来自对上述**已选定规范与无量纲化的级数**直接求和，不是四维 QCD 格点谱数据。给定相应的公共高斯及 Wilson-line 因子之后，它们证明可选择非零的树级零模颜色系数。
+These values are obtained by direct summation of the **dimensionless series in the chosen gauge**; they are not four-dimensional lattice-QCD spectral data. After accounting for the corresponding common Gaussian factors and Wilson lines, they establish the existence of nonzero tree-level zero-mode color coefficients.
 
-简短复核程序（Python 3 + NumPy）：
+A short verification script (Python 3 + NumPy):
 
 ```python
 import numpy as np
@@ -714,12 +726,13 @@ print('split determinant =', D_split)
 print('Wronskian         =', D_W)
 ```
 
-局域三导数源在环面上仍携带总 $B=1$ 的背景磁通，因此需将其横向系数视为带电截面；若希望定义仅依赖二维坐标的源，可选取同变换性质的测试截面 $w_B(y)$ 做 $\int_{T^2}d^2y\,w_B^*(y)\mathcal J_{4d}(x,y)$。
+The local three-derivative baryon source still carries the background flux associated with total $$B=1$$. Its transverse coefficient must therefore be treated as a charged section. To obtain a source depending only on two-dimensional coordinates, one may smear it against a test section $$w_B(y)$$ with the same transformation law, using $$\int_{T^2}d^2y\,w_B^*(y)\mathcal J_{4d}(x,y)$$.
 
 <a id="appendix-b"></a>
-## 附录 B：$U(2)_1\to SG+SU(2)_1$ 的逐项推导
 
-记 $U=e^{i\eta'/2}g$，则
+## Appendix B: Step-by-Step Decomposition $$U(2)_1\to SG+SU(2)_1$$
+
+Write $$U=e^{i\eta'/2}g$$. Then
 
 $$
 \begin{aligned}
@@ -730,14 +743,14 @@ $$
 \end{aligned}
 $$
 
-展开四项后，交叉项的 trace 正比于 $\operatorname{tr}(g^\dagger\partial_\mu g)=0$，而 $\operatorname{tr}(g^\dagger g)=2$，故
+Expanding the four terms, the traces of the mixed terms are proportional to $$\operatorname{tr}(g^\dagger\partial_\mu g)=0$$, while $$\operatorname{tr}(g^\dagger g)=2$$. Thus
 
 $$
 \operatorname{tr}(\partial U^\dagger\partial U)
 =\operatorname{tr}(\partial g^\dagger\partial g)+\frac12(\partial\eta')^2.
 $$
 
-令 $A=g^{-1}dg$、$a=(i/2)d\eta'$，有 $U^{-1}dU=A+a\mathbf1$，且 $a\wedge a=0$：
+With $$A=g^{-1}dg$$ and $$a=(i/2)d\eta'$$, we have $$U^{-1}dU=A+a\mathbf1$$ and $$a\wedge a=0$$:
 
 $$
 \operatorname{tr}(A+a\mathbf1)^3
@@ -745,18 +758,19 @@ $$
 =\operatorname{tr}A^3.
 $$
 
-最后，由 $\det U=e^{i\eta'}$，可把原文的 vortex 顶点
+Finally, because $$\det U=e^{i\eta'}$$, the vortex vertex in the original paper,
 
 $$
 -e^{i\theta/3}(\det U)^{-1/3}+\text{h.c.}
 $$
 
-转成 $-2\cos[(\eta'-\theta)/3]$，并吸收相应的系数至 $\zeta$。全局 $\mathbb Z_3$ 识别不会因局部代数分解而自动消失。
+becomes $$-2\cos[(\eta'-\theta)/3]$$ after absorbing the appropriate coefficient into $$\zeta$$. The global $$\mathbb Z_3$$ identification is not removed by this local algebraic decomposition.
 
 <a id="appendix-c"></a>
-## 附录 C：经典 sine-Gordon kink 与涨落谱
 
-采用真空能量已扣除的静态能量泛函
+## Appendix C: Classical Sine-Gordon Kink and Fluctuation Spectrum
+
+Use the static energy functional with the vacuum energy subtracted:
 
 $$
 E[\eta']=\int dx\left[
@@ -764,14 +778,14 @@ E[\eta']=\int dx\left[
 +2\zeta\left(1-\cos\frac{\eta'}3\right)\right].
 $$
 
-定义 $m^2=16\pi\zeta/9$，满足 $\Delta\eta'=6\pi$ 的经典解是
+With $$m^2=16\pi\zeta/9$$, the classical solution satisfying $$\Delta\eta'=6\pi$$ is
 
 $$
 \boxed{\eta'_K(x)=12\arctan e^{m(x-X)},\qquad
 \partial_x\eta'_K(x)=6m\,\operatorname{sech}[m(x-X)].}
 $$
 
-直接积分：
+Direct integration gives
 
 $$
 \int dx\,(\partial_x\eta'_K)^2
@@ -779,13 +793,13 @@ $$
 =72m.
 $$
 
-用一阶积分关系得到经典 kink 质量
+The first-integral relation gives the classical kink mass:
 
 $$
 \boxed{M_K^{\rm cl}=\frac{1}{8\pi}\,72m=\frac{9m}{\pi}.}
 $$
 
-它不是量子 sine-Gordon 的精确 soliton 质量。小涨落满足
+This is not the exact soliton mass in the quantum sine-Gordon theory. The linearized fluctuations obey
 
 $$
 \boxed{H_K=-\partial_x^2+m^2\left[1-2\operatorname{sech}^2(m(x-X))\right]
@@ -793,12 +807,13 @@ $$
 A=\partial_x+m\tanh(m(x-X)).}
 $$
 
-正规化零模为 $\psi_0\propto\operatorname{sech}(m(x-X))$，对应质心平移；没有其他正规化的离散 shape bound state，连续谱从 $\omega^2=m^2$ 开始。**它仅约束纯 SG 的经典 singlet 涨落，不能排除四维 QCD 的额外复合核心态。**
+The normalizable zero mode $$\psi_0\propto\operatorname{sech}(m(x-X))$$ corresponds to center-of-mass translation. There is no other normalizable discrete shape-bound state, and the continuum starts at $$\omega^2=m^2$$. **This only constrains classical singlet fluctuations in the pure SG model; it does not exclude additional composite core states in four-dimensional QCD.**
 
 <a id="appendix-d"></a>
-## 附录 D：标准中心扭曲的有限体积能谱
 
-若进一步将剩余空间方向有限化为长度 $R$，则 flavor CFT 能量为
+## Appendix D: Finite-Volume Spectrum of the Standard Center Twist
+
+If the remaining spatial direction is also compactified with circumference $$R$$, the flavor CFT energy is
 
 $$
 E_f(R)=\frac{2\pi v}{R}
@@ -806,21 +821,21 @@ E_f(R)=\frac{2\pi v}{R}
 \qquad c=1.
 $$
 
-标准扭曲最低层 $h+\bar h=1/4$，与未扭曲真空的差为
+The lowest twisted level has $$h+\bar h=1/4$$, so its energy difference from the untwisted vacuum is
 
 $$
 \boxed{\Delta E_f(R)=\frac{2\pi v}{R}\cdot\frac14
 =\frac{\pi v}{2R}.}
 $$
 
-在**最小因子化、适当拓扑边界条件、无额外 $1/R$ 缺陷相移贡献**的假设下，可考虑拟合
+Assuming **minimal factorization, suitable topological boundary conditions, and no additional $$1/R$$ contribution from defect scattering phase shifts**, one may consider the fit
 
 $$
 E_{B=1}(R)-E_{B=0}(R)
 =M_B+\frac{\pi v}{2R}+\cdots.
 $$
 
-对应 $SU(2)_1$ characters 的低阶展开为
+The low-order expansions of the corresponding $$SU(2)_1$$ characters are
 
 $$
 \begin{aligned}
@@ -829,18 +844,19 @@ $$
 \end{aligned}
 $$
 
-将两个手征通道合并、令 $q=\bar q$ 进行形式能级计数，得到最低简并度序列
+Combining the two chiral channels and setting $$q=\bar q$$ for a formal energy-level count gives the degeneracy sequence
 
 $$
 \boxed{d_n=4,\ 16,\ 40,\ 96,\ 204,\ldots}
 $$
 
-它仅针对标准扭曲 CFT，不含移动 soliton 质心塔，也不含可能的核心 Hilbert space；它不是四维格点 QCD 数据。
+This applies only to the standard twisted CFT. It excludes the translational momentum tower of the mobile soliton and any possible core Hilbert space, and it is not four-dimensional lattice-QCD data.
 
 <a id="appendix-e"></a>
-## 附录 E：单 soliton 谱密度的相空间推导及归一化说明
 
-对一个手征软模，取
+## Appendix E: Phase-Space Derivation and Normalization of the One-Soliton Spectral Density
+
+For a chiral soft mode, use
 
 $$
 \frac1{z^{1/2}}=\frac1{\sqrt\pi}
@@ -848,14 +864,14 @@ $$
 \varepsilon^{-1/2}e^{-\varepsilon z}.
 $$
 
-设 soliton 的 rapidity 为 $\vartheta$，其动量为
+Let the soliton rapidity be $$\vartheta$$, with momentum
 
 $$
 p_{\rm sol}^0=M\cosh\vartheta,
 \qquad p_{\rm sol}^1=M\sinh\vartheta.
 $$
 
-与一支右移动软模 $p_f=(\varepsilon,\varepsilon)$ 组合，有
+Combining it with a right-moving soft mode $$p_f=(\varepsilon,\varepsilon)$$ gives
 
 $$
 \begin{aligned}
@@ -865,7 +881,7 @@ s=P^2&=M^2+2M\varepsilon e^{-\vartheta}.
 \end{aligned}
 $$
 
-变量变换的 Jacobian 满足
+The Jacobian for the change of variables is
 
 $$
 \left|\frac{\partial(P^0,P^1)}
@@ -873,29 +889,30 @@ $$
 =M e^{-\vartheta}=P_-.
 $$
 
-取相应拓扑顶点的单 soliton form factor，在本文的左右手性约定及 [3] 的归一化框架内，其 rapidity 权重可写为 $|F_L(\vartheta)|^2\propto e^{-3\vartheta/2}$（右手版本宇称相反）。于是相空间积分中
+For the appropriate topological vertex, the one-soliton form factor has rapidity dependence $$|F_L(\vartheta)|^2\propto e^{-3\vartheta/2}$$ in our left/right convention and the normalization framework of [3] (the right-handed expression is related by parity). The phase-space integral then contains
 
 $$
 \frac{|F_L(\vartheta)|^2\,\varepsilon^{-1/2}}{P_-}
 \ \propto\ P_-\,(s-M^2)^{-1/2}.
 $$
 
-因此在剥除固定的 $P_-$ 运动学因子后，
+Thus, after extracting the fixed $$P_-$$ kinematic prefactor,
 
 $$
 \boxed{\rho_L^{(1)}(s)=A_L
 \frac{\Theta(s-M^2)}{\sqrt{s-M^2}}.}
 $$
 
-$A_L$ 包含二维算符归一化、singlet soliton 的 form factor 及四维源匹配系数，不能仅由 $SU(2)_1$ 权重确定。由宇称和对称归一化可得到相应的 $\rho_R^{(1)}$。对不同的谱密度张量分解方式，$P_\pm$ 的提取约定必须保持一致。
+The coefficient $$A_L$$ includes normalization of the two-dimensional operator, the singlet-soliton form factor, and the four-dimensional source-matching coefficient; it cannot be determined from the $$SU(2)_1$$ conformal weight alone. Parity and matching normalizations give the corresponding $$\rho_R^{(1)}$$. The convention used to factor out $$P_\pm$$ must be kept consistent across different tensor decompositions of the spectral density.
 
 <a id="references"></a>
-## 参考文献
 
-1. Y. Tanizaki and M. Ünsal, *Center vortex and confinement in Yang–Mills theory and QCD with anomaly-preserving compactifications*, **PTEP 2022**, 04A108, [arXiv:2201.06166](https://arxiv.org/abs/2201.06166), [DOI](https://doi.org/10.1093/ptep/ptac042). —— 原始磁通紧致化背景及零模分析。
-2. Y. Hayashi and Y. Tanizaki, *Semiclassics for the QCD vacuum structure through $T^2$-compactification with the baryon-'t Hooft flux*, **JHEP 08 (2024) 001**, [arXiv:2402.04320](https://arxiv.org/abs/2402.04320), [DOI](https://doi.org/10.1007/JHEP08(2024)001). —— 残余 $\mathbb Z_3$、非阿贝尔玻色化、扩展的 $\eta'$ 周期和真空有效作用量。
-3. S. Lukyanov and A. B. Zamolodchikov, *Form factors of soliton-creating operators in the sine-Gordon model*, **Nucl. Phys. B 607 (2001) 437–455**, [arXiv:hep-th/0102079](https://arxiv.org/abs/hep-th/0102079), [DOI](https://doi.org/10.1016/S0550-3213(01)00262-0). —— soliton-creating vertex 的 form-factor 方法。
+## References
+
+1. Y. Tanizaki and M. Ünsal, *Center vortex and confinement in Yang–Mills theory and QCD with anomaly-preserving compactifications*, **PTEP 2022**, 04A108, [arXiv:2201.06166](https://arxiv.org/abs/2201.06166), [DOI](https://doi.org/10.1093/ptep/ptac042). — The original flux-compactification background and zero-mode analysis.
+2. Y. Hayashi and Y. Tanizaki, *Semiclassics for the QCD vacuum structure through $$T^2$$-compactification with the baryon-'t Hooft flux*, **JHEP 08 (2024) 001**, [arXiv:2402.04320](https://arxiv.org/abs/2402.04320), [DOI](https://doi.org/10.1007/JHEP08(2024)001). — The residual $$\mathbb Z_3$$, non-Abelian bosonization, extended periodicity of $$\eta'$$, and the vacuum effective action.
+3. S. Lukyanov and A. B. Zamolodchikov, *Form factors of soliton-creating operators in the sine-Gordon model*, **Nucl. Phys. B 607 (2001) 437–455**, [arXiv:hep-th/0102079](https://arxiv.org/abs/hep-th/0102079), [DOI](https://doi.org/10.1016/S0550-3213(01)00262-0). — The form-factor approach for soliton-creating vertices.
 
 ---
 
-*说明：本文区分了原始文献直接给出的理论结构与后续在指定模型内完成的推导。尚未完成的四维微观低能谱匹配不应在引用本文时省略。*
+*Note: This article distinguishes structures established directly in the cited literature from subsequent derivations within a specified model. The outstanding microscopic matching of the four-dimensional low-energy spectrum must not be omitted when citing these results.*
