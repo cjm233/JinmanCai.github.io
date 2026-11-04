@@ -1,12 +1,34 @@
+# ==========================================
+# Basic Website Information
+# ==========================================
+
 title: Research Notes
-description: I'm completely a layman in the field of QCD research outside of class, and I'm trying to get started with it using AI.
+
+description: >
+  I'm completely a layman in the field of QCD research
+  outside of class, and I'm trying to get started with
+  it using AI.
+
+# ==========================================
+# Jekyll Theme
+# ==========================================
+
 theme: minima
+
+# Website Language
 lang: zh-CN
 
-# 新增：让 Minima 主题在首页显示文章摘要（而不是全文）
+# ==========================================
+# Homepage Settings
+# ==========================================
+
+# Display article excerpts instead of full articles
 show_excerpts: true
 
-# 新增：配置 Markdown 解析器和数学公式引擎（极其重要！）
+# ==========================================
+# Markdown Configuration
+# ==========================================
+
 markdown: kramdown
 
 kramdown:
