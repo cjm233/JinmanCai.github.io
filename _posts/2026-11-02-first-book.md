@@ -1,4 +1,6 @@
 ---
+layout: post
+lang: en
 title: "Baryon Operators, Topological Solitons, and Continuum Thresholds in Small-T² QCD: Research Progress and Limits of the Proof"
 date: 2026-11-02
 permalink: /posts/2026/11/qcd-t2-baryon-threshold/
@@ -11,8 +13,6 @@ tags:
   - sine-Gordon
   - spectral-density
 math: true
-use_math: true
-mathjax: true
 ---
 
 
@@ -126,7 +126,7 @@ $$
 Consequently, the low-energy flavor spaces are
 
 $$
-U_R=\operatorname{span}\{\chi_{u,R},\chi_{d,R}\}
+U_R=\\mathrm{span}\{\chi_{u,R},\chi_{d,R}\}
 \simeq\mathbf2_R,
 \qquad
 U_L\simeq\mathbf2_L.
@@ -154,7 +154,7 @@ Since $$\dim U_R=\dim U_L=2$$,
 
 $$
 \Lambda^3U_R=\Lambda^3U_L=0,
-\qquad \Lambda^2\mathbf2=\mathbf1.
+\qquad \Lambda^2\\mathbf{2}=\\mathbf{1}.
 $$
 
 It follows that
@@ -230,7 +230,7 @@ Choose three positions $$y_i$$ on the transverse $$T^2$$ and a common base point
 
 $$
 \widehat q_f(x;y_i,y_0)
-=W(y_0,y_i)q_f(x,y_i),
+=W(y_0,y_i)q_f(x,y_i).
 $$
 
 Here $$W$$ parallel-transports color and background gauge indices along a specified path. The resulting four-dimensional Dirac-spinor-valued source is
@@ -342,13 +342,13 @@ $$
 \left[\frac{i}{2}(\partial_\mu\eta')g+\partial_\mu g\right],
 $$
 
-together with $$\operatorname{tr}(g^\dagger\partial_\mu g)=\partial_\mu\ln\det g=0$$, we obtain
+together with $$\\mathrm{tr}(g^\dagger\partial_\mu g)=\partial_\mu\ln\det g=0$$, we obtain
 
 $$
 \boxed{
-\operatorname{tr}(\partial_\mu U^\dagger\partial_\mu U)
+\\mathrm{tr}(\partial_\mu U^\dagger\partial_\mu U)
 =\frac12(\partial_\mu\eta')^2
-+\operatorname{tr}(\partial_\mu g^\dagger\partial_\mu g).}
++\\mathrm{tr}(\partial_\mu g^\dagger\partial_\mu g).}
 $$
 
 With the WZW kinetic normalization $$1/(8\pi)$$, the resulting singlet kinetic term is $$(\partial\eta')^2/(16\pi)$$.
@@ -358,15 +358,15 @@ With the WZW kinetic normalization $$1/(8\pi)$$, the resulting singlet kinetic t
 Write $$A=g^{-1}dg$$. Since
 
 $$
-U^{-1}dU=\frac i2d\eta'\,\mathbf1+A,
-\qquad \operatorname{tr}(A\wedge A)=0,
+U^{-1}dU=\frac i2d\eta'\,\\mathbf{1}+A,
+\qquad \\mathrm{tr}(A\wedge A)=0,
 $$
 
 the local three-form satisfies
 
 $$
-\operatorname{tr}(U^{-1}dU)^3
-=\operatorname{tr}(g^{-1}dg)^3.
+\\mathrm{tr}(U^{-1}dU)^3
+=\\mathrm{tr}(g^{-1}dg)^3.
 $$
 
 The center-vortex potential depends on $$(\det U)^{\pm1/3}$$ with the appropriate extended-phase definition and therefore only on $$\eta'$$. For massless quarks, the leading-order local action becomes
@@ -555,7 +555,7 @@ $$
 =(1-\Delta_{\rm def})\widehat\lambda+\cdots.}
 $$
 
-With massless quarks and exact $$SU(2)_L\times SU(2)_R$$ symmetry, $$\operatorname{tr}g$$ is forbidden, and $$J_L^aJ_R^a$$ is not invariant under the full chiral group. Conventional chirally invariant flavor scalar corrections, such as $$T_f\bar T_f$$, are irrelevant near the fixed point.
+With massless quarks and exact $$SU(2)_L\times SU(2)_R$$ symmetry, $$\\mathrm{tr}g$$ is forbidden, and $$J_L^aJ_R^a$$ is not invariant under the full chiral group. Conventional chirally invariant flavor scalar corrections, such as $$T_f\bar T_f$$, are irrelevant near the fixed point.
 
 On the **standard invertible center line with no additional quantum core**, an allowed stress-tensor coupling takes the form
 
@@ -580,7 +580,7 @@ $$
 \delta S_{\rm mix}
 =\frac{c_T}{\Lambda_\perp^2}
 \int d^2x\,(\partial\eta')^2 T_f^{xx},
-\qquad \Lambda_\perp\sim1/L,
+\qquad \Lambda_\perp\sim1/L.
 $$
 
 Substituting the classical kink $$\eta'_K$$ and assuming the flavor fields vary slowly over the core scale gives
@@ -743,19 +743,19 @@ $$
 \end{aligned}
 $$
 
-Expanding the four terms, the traces of the mixed terms are proportional to $$\operatorname{tr}(g^\dagger\partial_\mu g)=0$$, while $$\operatorname{tr}(g^\dagger g)=2$$. Thus
+Expanding the four terms, the traces of the mixed terms are proportional to $$\\mathrm{tr}(g^\dagger\partial_\mu g)=0$$, while $$\\mathrm{tr}(g^\dagger g)=2$$. Thus
 
 $$
-\operatorname{tr}(\partial U^\dagger\partial U)
-=\operatorname{tr}(\partial g^\dagger\partial g)+\frac12(\partial\eta')^2.
+\\mathrm{tr}(\partial U^\dagger\partial U)
+=\\mathrm{tr}(\partial g^\dagger\partial g)+\frac12(\partial\eta')^2.
 $$
 
-With $$A=g^{-1}dg$$ and $$a=(i/2)d\eta'$$, we have $$U^{-1}dU=A+a\mathbf1$$ and $$a\wedge a=0$$:
+With $$A=g^{-1}dg$$ and $$a=(i/2)d\eta'$$, we have $$U^{-1}dU=A+a\\mathbf{1}$$ and $$a\wedge a=0$$:
 
 $$
-\operatorname{tr}(A+a\mathbf1)^3
-=\operatorname{tr}A^3+3a\wedge\operatorname{tr}(A\wedge A)
-=\operatorname{tr}A^3.
+\\mathrm{tr}(A+a\\mathbf{1})^3
+=\\mathrm{tr}A^3+3a\wedge\\mathrm{tr}(A\wedge A)
+=\\mathrm{tr}A^3.
 $$
 
 Finally, because $$\det U=e^{i\eta'}$$, the vortex vertex in the original paper,
@@ -782,14 +782,14 @@ With $$m^2=16\pi\zeta/9$$, the classical solution satisfying $$\Delta\eta'=6\pi$
 
 $$
 \boxed{\eta'_K(x)=12\arctan e^{m(x-X)},\qquad
-\partial_x\eta'_K(x)=6m\,\operatorname{sech}[m(x-X)].}
+\partial_x\eta'_K(x)=6m\,\\mathrm{sech}[m(x-X)].}
 $$
 
 Direct integration gives
 
 $$
 \int dx\,(\partial_x\eta'_K)^2
-=36m^2\int dx\,\operatorname{sech}^2[m(x-X)]
+=36m^2\int dx\,\\mathrm{sech}^2[m(x-X)]
 =72m.
 $$
 
@@ -802,12 +802,12 @@ $$
 This is not the exact soliton mass in the quantum sine-Gordon theory. The linearized fluctuations obey
 
 $$
-\boxed{H_K=-\partial_x^2+m^2\left[1-2\operatorname{sech}^2(m(x-X))\right]
+\boxed{H_K=-\partial_x^2+m^2\left[1-2\\mathrm{sech}^2(m(x-X))\right]
 =A^\dagger A,\qquad
 A=\partial_x+m\tanh(m(x-X)).}
 $$
 
-The normalizable zero mode $$\psi_0\propto\operatorname{sech}(m(x-X))$$ corresponds to center-of-mass translation. There is no other normalizable discrete shape-bound state, and the continuum starts at $$\omega^2=m^2$$. **This only constrains classical singlet fluctuations in the pure SG model; it does not exclude additional composite core states in four-dimensional QCD.**
+The normalizable zero mode $$\psi_0\propto\\mathrm{sech}(m(x-X))$$ corresponds to center-of-mass translation. There is no other normalizable discrete shape-bound state, and the continuum starts at $$\omega^2=m^2$$. **This only constrains classical singlet fluctuations in the pure SG model; it does not exclude additional composite core states in four-dimensional QCD.**
 
 <a id="appendix-d"></a>
 
@@ -889,7 +889,7 @@ $$
 =M e^{-\vartheta}=P_-.
 $$
 
-For the appropriate topological vertex, the one-soliton form factor has rapidity dependence $$|F_L(\vartheta)|^2\propto e^{-3\vartheta/2}$$ in our left/right convention and the normalization framework of [3] (the right-handed expression is related by parity). The phase-space integral then contains
+For the appropriate topological vertex, the one-soliton form factor has rapidity dependence $$\lvert F_L(\vartheta)\rvert^2\propto e^{-3\vartheta/2}$$ in our left/right convention and the normalization framework of [3] (the right-handed expression is related by parity). The phase-space integral then contains
 
 $$
 \frac{|F_L(\vartheta)|^2\,\varepsilon^{-1/2}}{P_-}
