@@ -16,7 +16,7 @@ mathjax: true
 ---
 
 <!-- MathJax fallback for standalone Jekyll / GitHub Pages installations.
-     If the theme already loads MathJax, this block does not load a second copy. -->
+     Since the Minima theme does not load MathJax by default, this block forces it. -->
 <script>
 (function () {
   if (window.MathJax || document.querySelector('script[src*="mathjax"]')) return;
@@ -87,6 +87,7 @@ This is the **leading one-soliton continuum contribution in the minimal factoriz
 15. [References](#references)
 
 <a id="section-1"></a>
+
 ## 1. Research Objective and Logical Chain
 
 The sequence of implications we aim to establish is
@@ -116,6 +117,7 @@ $$
 **Notation:** $L$ is the transverse $T^2$ size; $R$ is the circumference of the remaining spatial direction when it is compactified further; and $M_B$ is the physical mass of the lowest candidate soliton, which should not be confused with the classical small-fluctuation mass.
 
 <a id="section-2"></a>
+
 ## 2. Four-Dimensional Flux Compactification and Two-Dimensional Zero Modes [Literature]
 
 Write the four-dimensional coordinates as $X=(x,y)$, with $x\in\mathbb R^{1,1}$ and $y=(x_3,x_4)\in T^2$. In the background with one unit of baryon magnetic flux,
@@ -154,6 +156,7 @@ $$
 **Conclusion:** The compactified microscopic background supports the construction of two-dimensional low-energy fields. However, a gap for nonzero KK modes around the vacuum background does **not** establish the absence of additional low-energy states in the interacting baryon core.
 
 <a id="section-3"></a>
+
 ## 3. Classification of Lowest-Dimension Two-Dimensional Baryon Operators [Derived]
 
 ### 3.1 Classification from Grassmann Anticommutation
@@ -220,6 +223,7 @@ $$
 **Scope:** The statement that there are exactly two types applies **only to derivative-free, lowest-classical-dimension operators built from the two-dimensional zero modes**. It must not be extended to claim that there are only two baryon interpolating operators in the full four-dimensional theory.
 
 <a id="section-4"></a>
+
 ## 4. Four-Dimensional Baryon Sources and Point-Splitting Matching [Derived]
 
 ### 4.1 Why Does the Tree-Level Projection of a Local Three-Quark Source Vanish?
@@ -336,6 +340,7 @@ Its tree-level projection onto three zero modes is proportional to $\mathcal W_{
 **Note:** A point-split source at finite separation and a derivative-free local Ioffe current are different operators. Nonvanishing overlap of the former does not imply nonvanishing tree-level zero-mode overlap of the latter.
 
 <a id="section-5"></a>
+
 ## 5. Non-Abelian Bosonization and Local Factorization [Literature + Derived]
 
 ### 5.1 From Two Two-Dimensional Dirac Fields to the $U(2)_1$ WZW Model
@@ -413,6 +418,7 @@ $$
 The vortex deformation is therefore relevant and generates a mass scale in the singlet sector; with the full chiral symmetry preserved, the $SU(2)_1$ flavor sector remains a massless CFT at leading order. **Quantum corrections and the effects of a particular baryon defect require separate analysis.**
 
 <a id="section-6"></a>
+
 ## 6. Topological Baryon Charge and Center Twist [Literature + Conditional]
 
 ### 6.1 $B=1$ Corresponds to a $6\pi$ Winding of $\eta'$
@@ -485,6 +491,7 @@ $$
 The two channels are flavor doublets, giving four components in total at the lowest level. **This is a representation-theoretic result within the specified twisted CFT, not an independent measurement of the lowest four-dimensional QCD spectrum.**
 
 <a id="section-7"></a>
+
 ## 7. One-Soliton Threshold Spectral Density [Derived Within the Model]
 
 ### 7.1 Singlet–Flavor Factorization of the Baryon Operator
@@ -557,6 +564,7 @@ $$
 When parity is unbroken and the normalizations are chosen consistently, the two diagonal one-soliton spectral densities have the same threshold form.
 
 <a id="section-8"></a>
+
 ## 8. RG Stability, Uniqueness, and Microscopic Obstructions
 
 ### 8.1 Bulk and Defect RG Must Be Distinguished
@@ -656,6 +664,7 @@ To promote the candidate exponent to an unconditional prediction for the lowest 
 These questions cannot be answered from local factorization of the vacuum EFT, the center-twisted partition function, or the classical fluctuation spectrum of the pure SG kink alone. Lattice calculations can test the predictions but are not logically the only route; new nonperturbative input or controlled microscopic matching is still needed.
 
 <a id="section-9"></a>
+
 ## 9. Scope of the Results and Next Questions
 
 | Research question | Present conclusion | Evidence level |
@@ -678,6 +687,7 @@ These questions cannot be answered from local factorization of the vacuum EFT, t
 ---
 
 <a id="appendix-a"></a>
+
 ## Appendix A: Explicit Transverse Zero-Mode Wavefunctions and a Nonzero Wronskian
 
 In the local gauge used in [1], define
@@ -735,190 +745,3 @@ D_split = np.linalg.det(np.column_stack([u(0), u(1/3), u(2/3)]))
 D_W     = np.linalg.det(np.column_stack([u(0), u(0, 1), u(0, 2)]))
 print('split determinant =', D_split)
 print('Wronskian         =', D_W)
-```
-
-The local three-derivative baryon source still carries the background flux associated with total $B=1$. Its transverse coefficient must therefore be treated as a charged section. To obtain a source depending only on two-dimensional coordinates, one may smear it against a test section $w_B(y)$ with the same transformation law, using $\int_{T^2}d^2y\,w_B^*(y)\mathcal J_{4d}(x,y)$.
-
-<a id="appendix-b"></a>
-## Appendix B: Step-by-Step Decomposition $U(2)_1\to SG+SU(2)_1$
-
-Write $U=e^{i\eta'/2}g$. Then
-
-$$
-\begin{aligned}
-\partial_\mu U&=e^{i\eta'/2}
-\left(\partial_\mu g+\frac i2(\partial_\mu\eta')g\right),\\
-\partial_\mu U^\dagger&=
-\left(\partial_\mu g^\dagger-\frac i2(\partial_\mu\eta')g^\dagger\right)e^{-i\eta'/2}.
-\end{aligned}
-$$
-
-Expanding the four terms, the traces of the mixed terms are proportional to $\operatorname{tr}(g^\dagger\partial_\mu g)=0$, while $\operatorname{tr}(g^\dagger g)=2$. Thus
-
-$$
-\operatorname{tr}(\partial U^\dagger\partial U)
-=\operatorname{tr}(\partial g^\dagger\partial g)+\frac12(\partial\eta')^2.
-$$
-
-With $A=g^{-1}dg$ and $a=(i/2)d\eta'$, we have $U^{-1}dU=A+a\mathbf1$ and $a\wedge a=0$:
-
-$$
-\operatorname{tr}(A+a\mathbf1)^3
-=\operatorname{tr}A^3+3a\wedge\operatorname{tr}(A\wedge A)
-=\operatorname{tr}A^3.
-$$
-
-Finally, because $\det U=e^{i\eta'}$, the vortex vertex in the original paper,
-
-$$
--e^{i\theta/3}(\det U)^{-1/3}+\text{h.c.}
-$$
-
-becomes $-2\cos[(\eta'-\theta)/3]$ after absorbing the appropriate coefficient into $\zeta$. The global $\mathbb Z_3$ identification is not removed by this local algebraic decomposition.
-
-<a id="appendix-c"></a>
-## Appendix C: Classical Sine-Gordon Kink and Fluctuation Spectrum
-
-Use the static energy functional with the vacuum energy subtracted:
-
-$$
-E[\eta']=\int dx\left[
-\frac{(\partial_x\eta')^2}{16\pi}
-+2\zeta\left(1-\cos\frac{\eta'}3\right)\right].
-$$
-
-With $m^2=16\pi\zeta/9$, the classical solution satisfying $\Delta\eta'=6\pi$ is
-
-$$
-\boxed{\eta'_K(x)=12\arctan e^{m(x-X)},\qquad
-\partial_x\eta'_K(x)=6m\,\operatorname{sech}[m(x-X)].}
-$$
-
-Direct integration gives
-
-$$
-\int dx\,(\partial_x\eta'_K)^2
-=36m^2\int dx\,\operatorname{sech}^2[m(x-X)]
-=72m.
-$$
-
-The first-integral relation gives the classical kink mass:
-
-$$
-\boxed{M_K^{\rm cl}=\frac{1}{8\pi}\,72m=\frac{9m}{\pi}.}
-$$
-
-This is not the exact soliton mass in the quantum sine-Gordon theory. The linearized fluctuations obey
-
-$$
-\boxed{H_K=-\partial_x^2+m^2\left[1-2\operatorname{sech}^2(m(x-X))\right]
-=A^\dagger A,\qquad
-A=\partial_x+m\tanh(m(x-X)).}
-$$
-
-The normalizable zero mode $\psi_0\propto\operatorname{sech}(m(x-X))$ corresponds to center-of-mass translation. There is no other normalizable discrete shape-bound state, and the continuum starts at $\omega^2=m^2$. **This only constrains classical singlet fluctuations in the pure SG model; it does not exclude additional composite core states in four-dimensional QCD.**
-
-<a id="appendix-d"></a>
-## Appendix D: Finite-Volume Spectrum of the Standard Center Twist
-
-If the remaining spatial direction is also compactified with circumference $R$, the flavor CFT energy is
-
-$$
-E_f(R)=\frac{2\pi v}{R}
-\left(h+\bar h-\frac{c}{12}\right),
-\qquad c=1.
-$$
-
-The lowest twisted level has $h+\bar h=1/4$, so its energy difference from the untwisted vacuum is
-
-$$
-\boxed{\Delta E_f(R)=\frac{2\pi v}{R}\cdot\frac14
-=\frac{\pi v}{2R}.}
-$$
-
-Assuming **minimal factorization, suitable topological boundary conditions, and no additional $1/R$ contribution from defect scattering phase shifts**, one may consider the fit
-
-$$
-E_{B=1}(R)-E_{B=0}(R)
-=M_B+\frac{\pi v}{2R}+\cdots.
-$$
-
-The low-order expansions of the corresponding $SU(2)_1$ characters are
-
-$$
-\begin{aligned}
-\chi_0(q)&=q^{-1/24}(1+3q+4q^2+7q^3+13q^4+\cdots),\\
-\chi_{1/2}(q)&=q^{5/24}(2+2q+6q^2+8q^3+14q^4+\cdots).
-\end{aligned}
-$$
-
-Combining the two chiral channels and setting $q=\bar q$ for a formal energy-level count gives the degeneracy sequence
-
-$$
-\boxed{d_n=4,\ 16,\ 40,\ 96,\ 204,\ldots}
-$$
-
-This applies only to the standard twisted CFT. It excludes the translational momentum tower of the mobile soliton and any possible core Hilbert space, and it is not four-dimensional lattice-QCD data.
-
-<a id="appendix-e"></a>
-## Appendix E: Phase-Space Derivation and Normalization of the One-Soliton Spectral Density
-
-For a chiral soft mode, use
-
-$$
-\frac1{z^{1/2}}=\frac1{\sqrt\pi}
-\int_0^\infty d\varepsilon\,
-\varepsilon^{-1/2}e^{-\varepsilon z}.
-$$
-
-Let the soliton rapidity be $\vartheta$, with momentum
-
-$$
-p_{\rm sol}^0=M\cosh\vartheta,
-\qquad p_{\rm sol}^1=M\sinh\vartheta.
-$$
-
-Combining it with a right-moving soft mode $p_f=(\varepsilon,\varepsilon)$ gives
-
-$$
-\begin{aligned}
-P^0&=M\cosh\vartheta+\varepsilon,\\
-P^1&=M\sinh\vartheta+\varepsilon,\\
-s=P^2&=M^2+2M\varepsilon e^{-\vartheta}.
-\end{aligned}
-$$
-
-The Jacobian for the change of variables is
-
-$$
-\left|\frac{\partial(P^0,P^1)}
-{\partial(\vartheta,\varepsilon)}\right|
-=M e^{-\vartheta}=P_-.
-$$
-
-For the appropriate topological vertex, the one-soliton form factor has rapidity dependence $|F_L(\vartheta)|^2\propto e^{-3\vartheta/2}$ in our left/right convention and the normalization framework of [3] (the right-handed expression is related by parity). The phase-space integral then contains
-
-$$
-\frac{|F_L(\vartheta)|^2\,\varepsilon^{-1/2}}{P_-}
-\ \propto\ P_-\,(s-M^2)^{-1/2}.
-$$
-
-Thus, after extracting the fixed $P_-$ kinematic prefactor,
-
-$$
-\boxed{\rho_L^{(1)}(s)=A_L
-\frac{\Theta(s-M^2)}{\sqrt{s-M^2}}.}
-$$
-
-The coefficient $A_L$ includes normalization of the two-dimensional operator, the singlet-soliton form factor, and the four-dimensional source-matching coefficient; it cannot be determined from the $SU(2)_1$ conformal weight alone. Parity and matching normalizations give the corresponding $\rho_R^{(1)}$. The convention used to factor out $P_\pm$ must be kept consistent across different tensor decompositions of the spectral density.
-
-<a id="references"></a>
-## References
-
-1. Y. Tanizaki and M. Ünsal, *Center vortex and confinement in Yang–Mills theory and QCD with anomaly-preserving compactifications*, **PTEP 2022**, 04A108, [arXiv:2201.06166](https://arxiv.org/abs/2201.06166), [DOI](https://doi.org/10.1093/ptep/ptac042). — The original flux-compactification background and zero-mode analysis.
-2. Y. Hayashi and Y. Tanizaki, *Semiclassics for the QCD vacuum structure through $T^2$-compactification with the baryon-'t Hooft flux*, **JHEP 08 (2024) 001**, [arXiv:2402.04320](https://arxiv.org/abs/2402.04320), [DOI](https://doi.org/10.1007/JHEP08(2024)001). — The residual $\mathbb Z_3$, non-Abelian bosonization, extended periodicity of $\eta'$, and the vacuum effective action.
-3. S. Lukyanov and A. B. Zamolodchikov, *Form factors of soliton-creating operators in the sine-Gordon model*, **Nucl. Phys. B 607 (2001) 437–455**, [arXiv:hep-th/0102079](https://arxiv.org/abs/hep-th/0102079), [DOI](https://doi.org/10.1016/S0550-3213(01)00262-0). — The form-factor approach for soliton-creating vertices.
-
----
-
-*Note: This article distinguishes structures established directly in the cited literature from subsequent derivations within a specified model. The outstanding microscopic matching of the four-dimensional low-energy spectrum must not be omitted when citing these results.*
