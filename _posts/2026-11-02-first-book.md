@@ -126,10 +126,10 @@ $$
 Consequently, the low-energy flavor spaces are
 
 $$
-U_R=\\mathrm{span}\{\chi_{u,R},\chi_{d,R}\}
-\simeq\mathbf2_R,
+U_R=\mathrm{span}\{\chi_{u,R},\chi_{d,R}\}
+\simeq\mathbf{2}_R,
 \qquad
-U_L\simeq\mathbf2_L.
+U_L\simeq\mathbf{2}_L.
 $$
 
 **Conclusion:** The compactified microscopic background supports the construction of two-dimensional low-energy fields. However, a gap for nonzero KK modes around the vacuum background does **not** establish the absence of additional low-energy states in the interacting baryon core.
