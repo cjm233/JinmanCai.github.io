@@ -154,7 +154,7 @@ Since $$\dim U_R=\dim U_L=2$$,
 
 $$
 \Lambda^3U_R=\Lambda^3U_L=0,
-\qquad \Lambda^2\\mathbf{2}=\\mathbf{1}.
+\qquad \Lambda^2\mathbf{2}=\mathbf{1}.
 $$
 
 It follows that
