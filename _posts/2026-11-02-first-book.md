@@ -342,13 +342,13 @@ $$
 \left[\frac{i}{2}(\partial_\mu\eta')g+\partial_\mu g\right],
 $$
 
-together with $$\\mathrm{tr}(g^\dagger\partial_\mu g)=\partial_\mu\ln\det g=0$$, we obtain
+together with $$\mathrm{tr}(g^\dagger\partial_\mu g)=\partial_\mu\ln\det g=0$$, we obtain
 
 $$
 \boxed{
-\\mathrm{tr}(\partial_\mu U^\dagger\partial_\mu U)
+\mathrm{tr}(\partial_\mu U^\dagger\partial_\mu U)
 =\frac12(\partial_\mu\eta')^2
-+\\mathrm{tr}(\partial_\mu g^\dagger\partial_\mu g).}
++\mathrm{tr}(\partial_\mu g^\dagger\partial_\mu g).}
 $$
 
 With the WZW kinetic normalization $$1/(8\pi)$$, the resulting singlet kinetic term is $$(\partial\eta')^2/(16\pi)$$.
