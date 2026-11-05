@@ -743,19 +743,19 @@ $$
 \end{aligned}
 $$
 
-Expanding the four terms, the traces of the mixed terms are proportional to $$\\mathrm{tr}(g^\dagger\partial_\mu g)=0$$, while $$\\mathrm{tr}(g^\dagger g)=2$$. Thus
+Expanding the four terms, the traces of the mixed terms are proportional to $$\mathrm{tr}(g^\dagger\partial_\mu g)=0$$, while $$\mathrm{tr}(g^\dagger g)=2$$. Thus
 
 $$
-\\mathrm{tr}(\partial U^\dagger\partial U)
-=\\mathrm{tr}(\partial g^\dagger\partial g)+\frac12(\partial\eta')^2.
+\mathrm{tr}(\partial U^\dagger\partial U)
+=\mathrm{tr}(\partial g^\dagger\partial g)+\frac12(\partial\eta')^2.
 $$
 
-With $$A=g^{-1}dg$$ and $$a=(i/2)d\eta'$$, we have $$U^{-1}dU=A+a\\mathbf{1}$$ and $$a\wedge a=0$$:
+With $$A=g^{-1}dg$$ and $$a=(i/2)d\eta'$$, we have $$U^{-1}dU=A+a\mathbf{1}$$ and $$a\wedge a=0$$:
 
 $$
-\\mathrm{tr}(A+a\\mathbf{1})^3
-=\\mathrm{tr}A^3+3a\wedge\\mathrm{tr}(A\wedge A)
-=\\mathrm{tr}A^3.
+\mathrm{tr}(A+a\\mathbf{1})^3
+=\mathrm{tr}A^3+3a\wedge\mathrm{tr}(A\wedge A)
+=\mathrm{tr}A^3.
 $$
 
 Finally, because $$\det U=e^{i\eta'}$$, the vortex vertex in the original paper,
@@ -782,14 +782,14 @@ With $$m^2=16\pi\zeta/9$$, the classical solution satisfying $$\Delta\eta'=6\pi$
 
 $$
 \boxed{\eta'_K(x)=12\arctan e^{m(x-X)},\qquad
-\partial_x\eta'_K(x)=6m\,\\mathrm{sech}[m(x-X)].}
+\partial_x\eta'_K(x)=6m\,\mathrm{sech}[m(x-X)].}
 $$
 
 Direct integration gives
 
 $$
 \int dx\,(\partial_x\eta'_K)^2
-=36m^2\int dx\,\\mathrm{sech}^2[m(x-X)]
+=36m^2\int dx\,\mathrm{sech}^2[m(x-X)]
 =72m.
 $$
 
@@ -802,12 +802,12 @@ $$
 This is not the exact soliton mass in the quantum sine-Gordon theory. The linearized fluctuations obey
 
 $$
-\boxed{H_K=-\partial_x^2+m^2\left[1-2\\mathrm{sech}^2(m(x-X))\right]
+\boxed{H_K=-\partial_x^2+m^2\left[1-2\mathrm{sech}^2(m(x-X))\right]
 =A^\dagger A,\qquad
 A=\partial_x+m\tanh(m(x-X)).}
 $$
 
-The normalizable zero mode $$\psi_0\propto\\mathrm{sech}(m(x-X))$$ corresponds to center-of-mass translation. There is no other normalizable discrete shape-bound state, and the continuum starts at $$\omega^2=m^2$$. **This only constrains classical singlet fluctuations in the pure SG model; it does not exclude additional composite core states in four-dimensional QCD.**
+The normalizable zero mode $$\psi_0\propto\mathrm{sech}(m(x-X))$$ corresponds to center-of-mass translation. There is no other normalizable discrete shape-bound state, and the continuum starts at $$\omega^2=m^2$$. **This only constrains classical singlet fluctuations in the pure SG model; it does not exclude additional composite core states in four-dimensional QCD.**
 
 <a id="appendix-d"></a>
 
