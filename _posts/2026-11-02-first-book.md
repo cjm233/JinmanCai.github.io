@@ -358,15 +358,15 @@ With the WZW kinetic normalization $$1/(8\pi)$$, the resulting singlet kinetic t
 Write $$A=g^{-1}dg$$. Since
 
 $$
-U^{-1}dU=\frac i2d\eta'\,\\mathbf{1}+A,
-\qquad \\mathrm{tr}(A\wedge A)=0,
+U^{-1}dU=\frac i2d\eta'\,\mathbf{1}+A,
+\qquad \mathrm{tr}(A\wedge A)=0,
 $$
 
 the local three-form satisfies
 
 $$
-\\mathrm{tr}(U^{-1}dU)^3
-=\\mathrm{tr}(g^{-1}dg)^3.
+\mathrm{tr}(U^{-1}dU)^3
+=\mathrm{tr}(g^{-1}dg)^3.
 $$
 
 The center-vortex potential depends on $$(\det U)^{\pm1/3}$$ with the appropriate extended-phase definition and therefore only on $$\eta'$$. For massless quarks, the leading-order local action becomes
