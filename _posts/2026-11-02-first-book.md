@@ -266,7 +266,7 @@ $$
 
 Therefore, if the three parallel-transported color vectors are linearly independent, $$D_{\rm ps}\neq0$$. This establishes a **tree-level operator-overlap matching**, not a complete microscopic matching of the $$B=1$$ spectrum.
 
-### 4.3 Important Correction: The Original $$O(\delta^2)$$ Expansion Was Wrong
+### 4.3 From Point Splitting to Local Baryon Operators
 
 For the positive transverse-chirality zero mode, the covariant Dirac equation implies, in our conventions,
 
