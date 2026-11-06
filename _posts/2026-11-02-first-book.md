@@ -753,7 +753,7 @@ $$
 With $$A=g^{-1}dg$$ and $$a=(i/2)d\eta'$$, we have $$U^{-1}dU=A+a\mathbf{1}$$ and $$a\wedge a=0$$:
 
 $$
-\mathrm{tr}(A+a\\mathbf{1})^3
+\mathrm{tr}(A+a\mathbf{1})^3
 =\mathrm{tr}A^3+3a\wedge\mathrm{tr}(A\wedge A)
 =\mathrm{tr}A^3.
 $$
