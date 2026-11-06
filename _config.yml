@@ -34,3 +34,18 @@ markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
+
+
+# ==========================================
+# SEO and Google Search Configuration
+# ==========================================
+
+# Website URL
+url: "https://cjm233.github.io"
+
+# GitHub Pages project path
+baseurl: "/JinmanCai.github.io"
+
+# Jekyll Plugins
+plugins:
+  - jekyll-sitemap
