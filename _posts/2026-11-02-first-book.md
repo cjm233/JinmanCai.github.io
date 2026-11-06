@@ -555,7 +555,7 @@ $$
 =(1-\Delta_{\rm def})\widehat\lambda+\cdots.}
 $$
 
-With massless quarks and exact $$SU(2)_L\times SU(2)_R$$ symmetry, $$\\mathrm{tr}g$$ is forbidden, and $$J_L^aJ_R^a$$ is not invariant under the full chiral group. Conventional chirally invariant flavor scalar corrections, such as $$T_f\bar T_f$$, are irrelevant near the fixed point.
+With massless quarks and exact $$SU(2)_L\times SU(2)_R$$ symmetry, $$\mathrm{tr}g$$ is forbidden, and $$J_L^aJ_R^a$$ is not invariant under the full chiral group. Conventional chirally invariant flavor scalar corrections, such as $$T_f\bar T_f$$, are irrelevant near the fixed point.
 
 On the **standard invertible center line with no additional quantum core**, an allowed stress-tensor coupling takes the form
 
